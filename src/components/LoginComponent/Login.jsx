@@ -188,8 +188,8 @@ const Login = () => {
 
             /* Login is Successful Display that to the user */
             document.getElementById("error").style.color = "springgreen"
-            setErrorMessage(`Login Successful! You will be redirected in ${redirectTimeout/1000} second...`);
-            setSignedInMessage(`Login Successful! You will be redirected in ${redirectTimeout/1000} second...`);
+            setErrorMessage(`Login Successful! You will be redirected in ${redirectTimeout/1000} seconds...`);
+            setSignedInMessage(`Login Successful! You will be redirected in ${redirectTimeout/1000} seconds...`);
 
             /* Update the global variables */
             setUserType(data.role)
@@ -336,9 +336,6 @@ const Login = () => {
         })
         .then((response) => response.json())
         .then((data) => {
-            /* Reset all the variables */
-            stylingSignupEnable();
-
             if (data.isSuccessful != true) {
                 setErrorMessage(data.errors[0].msg);
                 return;
@@ -346,15 +343,12 @@ const Login = () => {
 
             /* Login is Successful Display that to the user */
             document.getElementById("error").style.color = "springgreen"
-            setErrorMessage(`Signup Successful! You will be redirected in ${redirectTimeout/1000} second...`);
-            
-            /* Redirect to the mainpage */
-            setTimeout(() => {
-                if (window.location.pathname != "/Login") {
-                    return;
-                }
-                document.getElementById("logo").click();
-            }, redirectTimeout);
+            setErrorMessage(`Signup Successful! Logging you in...`);
+
+            /* Fill in the userName and password given to the form login and then sign in the user */
+            document.getElementById("email").value = email;
+            document.getElementById("password").value = password;
+            handleSubmitLogin(e);
         }).catch((e) => {
             const errorMessage = e.constructor.name;
             if (errorMessage == "TypeError") {
