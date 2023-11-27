@@ -1,0 +1,117 @@
+.facility-component {
+    background-color: var(--color-grey);
+    color: white;
+
+    flex: 1 1 auto; /* Fills remaining space */
+    padding: 1em 8em;
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+}
+
+.facility-component .map-container {
+    width: 100%;
+    height: 50em;
+    border:  5px solid var(--color-grey);
+    outline: 8px solid var(--color-blue-3);
+    border-radius: 25px;
+}
+
+.facility-component #map-container {
+    position: relative;
+}
+
+.facility-component #mapImg {
+    max-height: 40em;
+    margin: auto;
+    border:  5px solid var(--color-grey);
+    outline: 8px solid var(--color-blue-3);
+    border-radius: 25px;
+}
+
+.facility-component #image-container {
+    display: grid;
+    column-gap: 3em;
+    grid-template-areas:    "labelFront labelBack"
+                            "facilityFront facilityBack";
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.facility-component figcaption{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    font-size: 4em;
+    margin-bottom: 0.1em;
+}
+
+.facility-component #image-container img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    outline: 8px solid var(--color-blue-3);
+    border: 5px solid var(--color-grey);
+}
+
+.facility-component #image-container #facilityFrontLabel {
+    grid-area: labelFront;
+}
+
+.facility-component #image-container #facilityBackLabel {
+    grid-area: labelBack;
+}
+
+.facility-component #image-container #facilityFront {
+    grid-area: facilityFront;
+}
+.facility-component #image-container #facilityBack {
+    grid-area: facilityBack;
+}
+
+.facility-component #disclaimer{
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: unset;
+}
+
+
+
+.facility-component p{
+    margin: 0; 
+}
+
+@media screen and (max-width: 1240px) {
+    .facility-component {
+        padding: 1em 8vw;
+    }
+
+    .facility-component .map-container {
+        height: 65vw;
+    }
+
+    .facility-component #image-container {
+        margin-top: unset;
+        grid-template-areas: 
+                            "labelFront"
+                            "facilityFront"
+                            "labelBack"
+                            "facilityBack";
+    }
+
+    .facility-component figcaption{
+        font-size: 5vw;
+    }
+
+    .facility-component #image-container #facilityFrontLabel {
+        margin: 0.2em;
+    }
+
+    .facility-component #image-container #facilityBackLabel {
+        margin: 0.2em;
+    }
+
+    .facility-component #disclaimer{
+        font-size: 4vw;
+    }
+}

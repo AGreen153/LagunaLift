@@ -1,0 +1,110 @@
+.orders-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 0.5em;
+    column-gap: 1em;
+    padding: 1em 8em;
+    color: white;
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+}
+
+.orders-component #title{
+    margin: unset;
+    margin-bottom: 0.5em;
+}
+
+.orders-component #orders{
+    display: flex;
+    gap: 3em;
+    flex-direction: column-reverse;
+}
+
+.orders-component #orderNumber{
+    color: whitesmoke;
+    margin-top: 0em;
+    background-color: var(--color-blue-4);
+    
+    text-align: center;
+    padding: 0.25em;
+}
+
+.orders-component .order{
+    border: 2px solid var(--color-blue-2);
+    outline: 3px solid black;
+    margin-bottom: 1em;
+    padding: 1em;
+    min-width: 52em;
+}
+
+.orders-component .order #stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em 2em;
+    background-color: var(--color-blue-4);
+    align-items: center;
+}
+
+.orders-component .order #stats #details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orders-component .order #stats #details time, .orders-component .order #stats #details time p{
+    width: 50%;
+}
+
+
+.orders-component .item img{
+    max-height: 10em;
+    width: 100%;
+    object-fit: cover;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, .8) 0px 10px 10px;
+    border: 1px solid black;
+}
+
+.orders-component .item{
+    display: grid;
+    grid-template-columns: 25fr 75fr;
+    flex-direction: row;
+    padding: 1em 0;
+}
+
+.orders-component .item .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1em;
+}
+
+.orders-component .item .details h1{
+    margin: unset;
+}
+
+.orders-component .item:not(:last-of-type) {
+    border-bottom: 2px solid var(--color-blue-2);
+}
+
+@media screen and (max-width: 1240px) {
+    .orders-component {
+        padding: 1em 8vw;
+    }
+
+    .orders-component .order{
+        min-width: 77em;
+    }
+
+    .orders-component #title, .orders-component .item .details h1 {
+        font-size: 2vw;
+    }
+
+    .orders-component #orderNumber, .orders-component .order #stats, .orders-component .item .details {
+        font-size: 1.5vw;
+    }
+}

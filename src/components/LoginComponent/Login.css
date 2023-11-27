@@ -1,0 +1,140 @@
+.login-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 1 auto;
+    font-size: 1.5em;
+    color: white;
+    background: var(--color-grey);
+    width: fit-content;
+    place-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+}
+
+/* Reuseable Styling */
+.login-component .flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-component .width50 {
+    width: 50%;
+}
+
+.login-component label {
+    margin-bottom: 0.25em;
+}
+
+.login-component input {
+    border-radius: 8px;
+    border: 3px solid black;
+    outline: none;
+    padding-left: 0.5em;
+    margin-bottom: 0.25em;
+}
+
+.login-component input:focus {
+    outline: 2px solid var(--color-blue-2);
+}
+
+.login-component .col-blue-2 {
+    color: var(--color-blue-2)
+}
+
+.login-component .col-grey-label {
+    color: grey;
+}
+
+.login-component span {
+    text-align: center;
+}
+
+.login-component button {
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--color-grey);
+    padding: 0.25em;
+    margin: 0.3em 0;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.login-component .text-blue-line{
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid var(--color-blue-2); 
+    line-height: 0.1em;
+}
+
+.login-component .text-blue-line span{
+    background: var(--color-grey);
+    padding:0 10px; 
+}
+
+/* Specific Styling */
+.login-component #error {
+    color: red;
+    padding: 1em 0em;
+}
+.login-component h1 {
+    font-size: 1em;
+    text-align: center;
+    text-wrap: balance;
+    margin-top: unset;
+    margin-bottom: 0.5em;
+}
+
+
+.login-component .btn_blue {
+    background: linear-gradient(var(--color-blue-2), var(--color-blue-3));
+}
+
+.login-component .btn_orange {
+    background: linear-gradient(#ffdb78,#f5b914);
+}
+
+.login-component .btn_orange:hover, .login-component .btn_blue:hover {
+    background: whitesmoke;
+    outline: 2px solid var(--color-blue-2);
+}
+
+.login-component .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em 1em;
+    border-radius: 25px;
+    border: 2px solid var(--color-blue-2);
+    outline: 3px solid black;
+}
+
+.login-component #cardSignUp {
+    display: none;
+}
+
+.login-component #row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.login-component ul {
+    font-size: 0.9em;
+}
+
+
+@media screen and (max-width: 1240px) {
+    .login-component {
+        width: 85%;
+    }
+    .login-component #cardSignIn {
+        width: 100%;
+    }
+
+    .login-component .text-blue-line span{
+        font-size: 0.75em;
+    }
+}

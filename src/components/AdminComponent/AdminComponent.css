@@ -1,0 +1,271 @@
+.admin-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    padding: 1em 8em;
+    column-gap: 1em;
+    color: white;
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+}
+
+.admin-component .row button:disabled {
+    background: grey;
+}
+
+.admin-component .row input:disabled {
+    background: grey;
+}
+
+.admin-component .row button:disabled:hover {
+    background-color: grey;
+    outline: unset;
+}
+
+.admin-component .row input:disabled:hover {
+    background-color: grey;
+    outline: unset;
+}
+
+.admin-component #error {
+    text-align: center;
+    color: red;
+    margin-top: unset;
+}
+
+.admin-component #success {
+    text-align: center;
+    color: limegreen;
+    margin-top: unset;
+}
+
+.admin-component .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-wrap:break-word;
+}
+
+.admin-component .rowGrid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    justify-content: space-between;
+    overflow-wrap: break-word;
+}
+
+.admin-component .row button, .admin-component .row input {
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--color-grey);
+    padding: 0.25em;
+    margin: 0.3em 0;
+    border: 3px solid black;
+    cursor: pointer;
+    background: linear-gradient(#ffdb78,#f5b914);
+}
+.admin-component .row input {
+    margin-top: 0.5em;
+    width: 100%;
+}
+
+.admin-component .row button:hover, .admin-component .row input:hover{
+    background: whitesmoke;
+    outline: 2px solid var(--color-blue-2);
+}
+
+.admin-component .row #buttons {
+    text-align: right;
+    align-self: center;
+}
+
+
+.admin-component #adminPanel {
+    display: grid;
+    grid-template-columns: 20fr 80fr;
+    column-gap: 4em;
+    height: 100%;
+    width: 100%;
+}
+
+.admin-component #adminPanel #sideBar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    border: 2px solid var(--color-blue-2);
+    outline: 3px solid black;
+    padding: 1em;
+    gap: 0.5em;
+}
+
+.admin-component #adminPanel #sideBar label{
+    cursor: pointer;
+    font-size: 1vw;
+    padding: 0 0.5em;
+    border-radius: 5px;
+}
+
+.admin-component #adminPanel #sideBar input:checked+label{
+    background-color: var(--color-blue-4);
+    outline: 3px solid black;
+}
+
+.admin-component #adminPanel #sideBar label:hover {
+    color: black;
+    background-color: var(--color-blue-3);
+}
+
+.admin-component #adminPanel #main {
+    border: 2px solid var(--color-blue-2);
+    outline: 3px solid black;
+    padding: 1em;
+}
+
+.admin-component #adminPanel #main > * {
+    width: 100%;
+}
+
+.admin-component #adminPanel #main #recentlySoldPanel table{
+    width: 100%;
+
+}
+
+.admin-component #adminPanel #main #recentlySoldPanel table tr > *{
+    width: 20%;
+    overflow-wrap: anywhere;
+    text-align: center;
+    outline: 2px solid var(--color-blue-3);
+    border: 3px solid black;
+    gap: 1em;
+    
+}
+
+.admin-component #adminPanel #main #recentlySoldPanel #toolbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+.admin-component #adminPanel #main #allItemsPanel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 3.5em;
+    row-gap: 3.5em;
+    padding-top: 1em;
+    align-content: start;
+}
+
+.admin-component #adminPanel #main .card {
+    display: grid;
+    grid-template-rows: auto min-content;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-blue-4);
+    color: white;
+    box-shadow: rgba(0, 0, 0, .8) 0px 10px 10px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 3px solid black;
+    padding: unset;
+    text-decoration: unset;
+    border: none;
+}
+
+.admin-component #adminPanel #main .card img{
+    height: 100%;
+    width: 100%;
+    max-height: 25em;
+    object-fit: cover;
+}
+
+.admin-component #adminPanel #main #allItemsPanel .card #text{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: center;
+}
+
+.admin-component #adminPanel #main #allItemsPanel .card #text h2{
+    font-weight: 400;
+    margin: unset;
+}
+
+.admin-component #adminPanel #main #editItemContainer, .admin-component #adminPanel #itemAddPanel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+}
+
+.admin-component #adminPanel #main #editItemContainer #left, .admin-component #adminPanel #itemAddPanel #left{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20fr 80fr;
+    column-gap: 1em;
+
+}
+
+.admin-component #adminPanel #main #editItemContainer #left .card #text{
+    padding: 1em;
+}
+
+.admin-component #adminPanel #main #editItemContainer #left .card #text h2{
+    margin: unset;
+}
+.admin-component #adminPanel #main #editItemContainer #container{
+    align-self: center;
+}
+
+.admin-component #adminPanel #main #editItemContainer #photo-track{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1em;
+}
+
+@media screen and (max-width: 1240px) {
+    .admin-component {
+        padding: 0em 8vw;
+    }
+
+    .admin-component #adminPanel #sideBar label {
+        font-size: 2vw;
+        text-align: center;
+        width: 100%;
+    }
+
+    .admin-component #adminPanel {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+    }
+
+    .admin-component #adminPanel #main > * {
+        font-size: 2vw;
+    }
+
+    .admin-component #adminPanel #main #recentlySoldPanel table tr > *{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .admin-component #adminPanel #main #allItemsPanel {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 1vw;
+        row-gap: 1.5em;
+        padding-top: unset;
+        font-size: 2vw;
+    }
+
+    .admin-component #adminPanel #main {
+        padding: 3em;
+    }
+}

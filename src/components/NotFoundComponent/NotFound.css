@@ -1,0 +1,33 @@
+.not-found-component {
+    flex: 1 1 auto; /* Sized to Content*/
+    color: white;
+    display: grid;
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+}
+
+.not-found-component #text {
+    height: 100%;
+    width: 100%;
+    padding: 0 8em;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 1240px) {
+    .not-found-component #text {
+        font-size: 2vw;
+        padding: 0 8vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .not-found-component #text {
+        font-size: 4vw;
+    }
+}

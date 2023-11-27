@@ -1,0 +1,306 @@
+.merchandise-component {
+    background: var(--color-grey);
+    flex: 1 1 auto; /* Sized to Content*/
+    padding: 0 8em;
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+}
+
+.merchandise-component #grid1x1 { 
+    height: 15em;
+    width: 100%;
+    margin-top: 0.25em;
+    margin-bottom: 1em;
+}
+
+.merchandise-component #grid1x1 div{
+    height: 100%;
+    width: 100%; 
+    background-image: url(../../assets/banner.png);
+    background-size: 25%;
+    background-position: right;
+    outline: 3px solid black;
+    
+    box-shadow: rgba(0, 0, 0, .4) 0px 10px 10px;
+}
+.merchandise-component #grid1x1 div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.merchandise-component #grid2x4 { 
+    margin-top: 0.5em;
+    display: grid;
+    grid-template-columns: 25fr 25fr 25fr 25fr;
+    grid-template-rows: 50fr 50fr;
+
+    height: 15em;
+    outline: 3px solid black;
+    box-shadow: rgba(0, 0, 0, .4) 0px 10px 10px;
+    
+}
+.merchandise-component #grid2x4 div {
+    position: relative;
+}
+.merchandise-component #grid2x4 img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.merchandise-component #grid {
+    display: grid;
+    grid-template-columns: 20fr 80fr;
+    column-gap: 4em;
+    margin-bottom: 2em;
+}
+
+
+.merchandise-component .categories h1 {
+    font-size: 1.75vw;
+    font-weight: 700;
+    margin: unset;
+    margin-bottom: 0.5em;
+}
+
+.merchandise-component #sideBar {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    position: sticky;
+    top: 1em;
+    border-radius: 25px;
+    padding-right: 1em;
+    margin-top: 1em;
+    color: white;
+}
+
+.merchandise-component #sideBar > *{
+    border-top: 3px solid var(--color-blue-2);
+    padding-bottom: 0.5em;
+}
+
+.merchandise-component #sideBar > *:last-child{
+    border-bottom: 3px solid var(--color-blue-2);
+}
+
+.merchandise-component .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin-bottom: 0.5em;
+    font-size: 1vw;
+}
+
+.merchandise-component .row .quantity {
+    font-size: 1vw;
+}
+
+.merchandise-component .row p{
+    margin: unset;
+}
+
+.merchandise-component #sideBar section h1 {
+    font-size: 1.25vw;
+    margin: unset;
+    margin-top: 0.5em;
+}
+
+.merchandise-component #sideBar .navigation .row button:nth-of-type(1) {
+    margin-right: 1em;
+}
+
+.merchandise-component #sideBar section .row button {
+    background-color: white;
+    border: none;
+    border-radius: 1em;
+    color: black;
+    font-size: 0.8em;
+    font-weight: 700;
+    width: 45%;
+    cursor: pointer;
+}
+
+.merchandise-component #sideBar section .row button:hover {
+    background-color: var(--color-blue-2);
+}
+
+.merchandise-component .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3.5em;
+    row-gap: 3.5em;
+    padding-top: 1em;
+    align-content: start;
+}
+
+.merchandise-component .main .card {
+    display: grid;
+    grid-template-rows: 75% 25%;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-blue-4);
+    color: white;
+    box-shadow: rgba(0, 0, 0, .8) 0px 10px 10px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none  ;
+    position:relative;
+
+    transition: all 500ms ease;
+}
+
+.merchandise-component .main .card img {
+    height: 100%;
+    width: 100%;
+    max-height: 25em;
+    object-fit: cover;
+}
+
+.merchandise-component .main .card img:nth-of-type(2) {
+    display: block;
+    position: absolute;
+    height: 75%;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+.merchandise-component .main .card:hover {
+    background-color: var(--color-blue-3);
+    color: black;
+    transition: all 500ms ease;
+}
+
+.merchandise-component .main .card:hover img:nth-of-type(2) {
+    opacity: 1;
+    transition: all 500ms ease;
+}
+
+.merchandise-component .main .card #text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 1em;
+    align-self: center;
+}
+
+.merchandise-component .main .card figcaption{
+    font-size: 1.5vw;
+}
+
+.merchandise-component .main .card h2{
+    margin-top: unset;
+    margin-bottom: unset;
+    font-size: 1.5vw;
+}
+
+.merchandise-component #loading {
+    color: white;
+    font-size: 2vw;
+    width: 100%;
+    margin: unset;
+    text-align: center;
+}
+
+.merchandise-component input[type="checkbox"], .merchandise-component label{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1240px) {
+    .merchandise-component {
+        padding: unset;
+    }
+    .merchandise-component .row {
+        font-size: 2vw;
+    }
+    .merchandise-component .row .quantity {
+        font-size: 2vw;
+    }
+    .merchandise-component #grid1x1 {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .merchandise-component #grid1x1 div{
+        background-size: 40%;
+    }
+    .merchandise-component #grid {
+        column-gap: 2em;
+    }
+    .merchandise-component #sideBar {
+        margin: unset;
+        padding-left: 1em;
+    }
+
+    .merchandise-component #sideBar section h1 {
+        font-size: 2vw;
+    }
+
+    .merchandise-component #sideBar .inputItem span {
+        font-size: 2vw;
+    }
+
+    .merchandise-component #sideBar .inputItem input {
+        width: 15vw;
+    }
+
+
+    .merchandise-component .main {
+        grid-template-columns: 1fr 1fr;
+        padding-top: unset;
+        padding-right: 1em;
+    }
+    
+    .merchandise-component .main .card figcaption{
+        font-size: 2vw;
+    }
+
+    .merchandise-component .main .card img {
+        max-height: unset;
+    }
+    
+    .merchandise-component .main .card h2{
+        font-size: 4vw;
+    }
+
+    .merchandise-component #loading {
+        font-size: 4vw;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .merchandise-component .main {
+        grid-template-columns: 1fr;
+    }
+    .merchandise-component #grid1x1 div{
+        background-size: 100%;
+    }
+    .merchandise-component .main .card figcaption{
+        font-size: 4vw;
+    }
+    .merchandise-component .main .card h2{
+        font-size: 8vw;
+    }
+
+    .merchandise-component .main .card {
+        height: unset;
+    }
+
+    .merchandise-component .main .card img {
+        height: unset;
+        min-height: unset;
+    }
+
+    .merchandise-component #sideBar section h1 {
+        font-size: 4vw;
+    }
+
+    .merchandise-component #sideBar .inputItem span {
+        font-size: 3vw;
+    }
+}

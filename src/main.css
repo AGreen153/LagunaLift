@@ -1,0 +1,63 @@
+:root {
+    --color-blue-1: #06d8ff;
+    --color-blue-2: #a6f1ff;
+    --color-blue-3: #73e9ff;
+    --color-blue-4: #007085;
+    --color-blue-5: #005767;
+    --color-grey: #1a1a1a;
+    
+
+    --font-family-text: 'Poppins', sans-serif;
+    --font-family-logo: 'Cormorant Garamond', serif;
+    --font-family-logo-new: 'Cambay', sans-serif;
+}
+
+/*
+    CSS Reset
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+input, textarea, button, select {
+    font: inherit;
+}
+body { 
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+    font-family: var(--font-family-text);
+    background: var(--color-grey);
+    height: 100%;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}

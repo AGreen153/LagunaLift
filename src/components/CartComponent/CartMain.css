@@ -1,0 +1,156 @@
+.cartmain-component {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    gap: 0.5em;
+    column-gap: 1em;
+    padding: 1em 8vw;
+    color: white;
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+}
+
+/* Elements */
+.cartmain-component h1, p {
+    margin: unset;
+}
+
+/* Classes */
+.cartmain-component .error {
+    margin: 0.25em;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.cartmain-component .removeButton {
+    min-width: 33%;
+    align-self: flex-start;
+    
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--color-grey);
+    padding: 0.25em;
+    border: 1px solid black;
+    cursor: pointer;
+
+    background: linear-gradient(#ffdb78,#f5b914);
+}
+
+.cartmain-component .removeButton:hover {
+    background: whitesmoke;
+    outline: 2px solid black;
+}
+
+.cartmain-component #cart {
+    border: 2px solid var(--color-blue-2);
+    outline: 3px solid black;
+    padding: 1em;
+}
+
+
+.cartmain-component #cart #links a{
+    color: white;
+    width: 100%;
+}
+
+.cartmain-component .item img{
+    max-height: 20em;
+    width: 100%;
+    object-fit: cover;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, .8) 0px 10px 10px;
+}
+
+.cartmain-component .item{
+    display: grid;
+    grid-template-columns: 25fr 75fr;
+    flex-direction: row;
+    padding: 1em 0;
+    border-bottom: 2px solid var(--color-blue-2);
+}
+
+.cartmain-component .item .details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 1em;
+    height: 100%;
+}
+
+.cartmain-component .item .details #quantity, .cartmain-component .item .moreThan10Styling {
+    display: flex;
+    flex-direction: row;
+}
+
+.cartmain-component #checkout {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    background: linear-gradient(135deg, rgba(0,112,133,1) 0%, rgba(255,255,255,1) 48%, rgba(0,112,133,1) 98%);
+    box-shadow: #0000003d 0px 8px 8px;
+    text-align: center;
+    justify-content: center;
+    padding: 0.5em;
+    width: 100%;
+    position: sticky;
+    top: 0em;
+    color: black;
+    border: 2px solid var(--color-blue-2);
+    outline: 3px solid black;
+}
+
+.cartmain-component #checkout button {
+    min-width: 25%;
+    align-self: center;
+    font-weight: 700;
+    color: var(--color-grey);
+    padding: 0.25em;
+    border: 1px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+
+    background: linear-gradient(var(--color-blue-2), var(--color-blue-3));
+}
+
+.cartmain-component #checkout button:hover{
+    background: var(--color-blue-3);
+}
+
+.cartmain-component #total {
+    margin: unset;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1240px) {
+    .cartmain-component {
+        column-gap: unset;
+        row-gap: 1em;
+        flex-direction: column-reverse;
+    }
+
+    .cartmain-component .item {
+        grid-template-columns: 35fr 65fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cartmain-component .item {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .cartmain-component .item .details {
+        margin-left: unset;
+        align-self: center;
+    }
+
+    .cartmain-component .item img {
+        max-height: 20em;
+        width: 50%;
+    }
+}

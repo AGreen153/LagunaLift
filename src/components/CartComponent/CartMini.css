@@ -1,0 +1,111 @@
+.cartMini-component {
+    display: none;
+    color: white; 
+    background-color: var(--color-grey);
+    right: 8em;
+    position: absolute;
+    outline: 3px solid black;
+    border: 2px solid var(--color-blue-2);
+    padding: 0.5em;
+    z-index: 999;
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+}
+
+.cartMini-component select {
+    width: 4em;
+    margin-left: 0.25em;
+}
+
+.cartMini-component .signoutStyling{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0;
+    padding-bottom: unset;
+}
+
+.cartMini-component .signoutStyling button{
+    place-items: center;
+    width: 100%;
+
+    border: none;
+    background: var(--color-blue-2);
+    border-radius: 1em;
+    padding: 0.25em;
+
+    color: var(--color-grey);
+    border: 2px solid black;
+    font-weight: 700;
+    font-size: 1em;
+
+    transition: all 300ms ease;
+    
+}
+
+.cartMini-component .signoutStyling button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: var(--color-blue-4);
+
+    transition: all 300ms ease;
+}
+
+.cartMini-component .item {
+    display: grid;
+    grid-template-columns: 30fr 70fr;
+    padding: 1em 0;
+    border-bottom: 2px solid var(--color-blue-2);
+}
+
+.cartMini-component .item  #quantity {
+    display: flex;
+    flex-direction: row;
+}
+.cartMini-component .item  #quantity input{
+    width: 4em;
+}
+
+.cartMini-component .item .details {
+    margin-left: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartMini-component .item .details .productLink{
+    width: fit-content;
+}
+
+.cartMini-component .item .details a {
+    text-decoration: none;
+}
+
+.cartMini-component .item .details a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.cartMini-component .item .details h1{
+    color: white;
+    font-size: 1em;
+    margin: unset
+}
+
+.cartMini-component .item .details h2{
+    font-size: 0.75em;
+    margin: unset;
+}
+
+.cartMini-component .item img {
+    max-height: 5em;
+    width: 100%;
+    object-fit: cover;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, .8) 0px 10px 10
+}
+
+@media screen and (max-width: 1240px) {
+    .cartMini-component {
+        right: 8vw;
+    }
+}

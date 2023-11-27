@@ -1,0 +1,202 @@
+.navbar-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 8em;
+    background-color: var(--color-grey);
+    min-height: 94px;
+    position: relative;
+
+    flex: 0 1 auto; /* Sized to Content */
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+    margin-top: 1em;
+}
+
+.navbar-component a{
+    text-decoration: none;
+}
+
+.navbar-component #logo{
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    height: fit-content;
+    padding: 0em 0.2em;
+    outline: 0px solid transparent;
+    border-radius: 10px;
+
+
+    transition-property: padding, outline, border-radius;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+.navbar-component #logo h1{
+    color: white;
+    font-family: var(--font-family-logo-new);
+    margin: unset;
+    position: relative;
+    top: 0.08em;
+
+
+    transition-property: color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+.navbar-component #logo h1:nth-of-type(1){
+    color: var(--color-blue-2);
+}
+
+.navbar-component #logo:hover{
+    outline: 5px solid var(--color-blue-2);
+
+    transition: all 500ms ease;
+}
+
+.navbar-component #logo:hover h1:nth-of-type(1){
+    color: white;
+
+    transition: all 500ms ease;
+}
+
+.navbar-component #logo:hover h1:nth-of-type(2){
+    color: var(--color-blue-2);
+
+    transition: all 500ms ease;
+}
+
+.navbar-component .links {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.navbar-component .links a {
+    color: white;
+    font-size: 125%;
+    font-weight: 700;
+    align-self: center;
+    transition: all 500ms ease;
+}
+
+.navbar-component .links a:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+.navbar-component .links a:hover {
+    color: var(--color-blue-2);
+    border-radius: 0;
+    
+    transition: all 500ms ease;
+}
+
+.navbar-component .links a:hover:after {
+    width: 100%;
+	background: var(--color-blue-2);
+}
+
+.navbar-component #imgCart {
+    width: 1.5em;
+    height: 1.5em;
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(78deg) brightness(109%) contrast(100%);
+}
+
+.navbar-component .flexRow {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar-component .flexRow p{
+    color: var(--color-blue-2);
+    font-size: 0.75em;
+    font-weight: 700;
+    position: absolute;
+    top: -52%;
+    left: 7%;
+    width: 100%;
+}
+
+/* Checkbox Hack */
+.navbar-component input[type=checkbox]{
+    display: none;
+}
+/* Hamburger Menu */
+.navbar-component .hamburger {
+    display: none;
+    font-size: 2em;
+    user-select: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1240px) {
+    .navbar-component {
+        flex-direction: row;
+        padding: 1em 8vw;
+        font-size: 2vw;
+    }
+
+    .navbar-component #logo{
+        font-size: 2vw;
+    }
+
+    .navbar-component .links {
+        display: none;
+    }
+
+    .navbar-component .hamburger {
+        display: block;
+    }
+
+    @keyframes slideIn {
+        0% {
+            top: -700%;
+        }
+        100% {
+            top: 98%;
+        }   
+    }
+
+    .navbar-component input[type=checkbox]:checked ~ .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        top: 98%;
+        left: 0;
+        width: 100%;
+        min-height: 40em;
+        z-index: 6;
+        background-color: var(--color-grey);
+        border: 5px solid var(--color-blue-2);
+        border-radius: 0 0 25px 25px;
+
+        animation-name: slideIn;
+        animation-duration: 500ms;
+    }
+
+    .navbar-component .links a {
+        width: fit-content;
+        text-align: center;
+        font-weight: 700;
+        color: var(--color-blue-2);
+    }
+}

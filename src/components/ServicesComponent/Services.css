@@ -1,0 +1,589 @@
+.services-component {
+    background: var(--color-grey);
+    padding: 0em 8em;
+
+    flex: 1 1 auto; /* Sized to Content*/
+    font-size: 1vw; /* So everything default scales with 4k resolution */
+}
+
+.services-component #subHeading {
+    font-size: 4em;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: white;
+}
+
+.services-component .card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: fit-content;
+    align-items: stretch;
+}
+
+.services-component .card-container .card{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    padding: 1em;
+    width: calc((100%/3));
+    background-color: #1b2028;
+    border-radius: 25px;
+    position: relative;
+    border: 2px solid black;
+    background-clip: padding-box;
+    color: white;
+    height: auto;
+    margin: 1em;
+    
+
+    box-shadow: rgba(0, 0, 0, .24) 0px 8px 8px;
+}
+
+.services-component .card header h1{
+    font-size: 2em;
+    padding-bottom: 1em;
+    text-align: center;
+
+    margin: unset;
+    padding: 0;
+}
+
+.services-component .card:nth-of-type(1) header{
+    border-bottom: 2px solid rgb(151, 146, 146);
+}
+.services-component .card:nth-of-type(2) header{
+    border-bottom: 2px solid #73e9ff;
+}
+.services-component .card:nth-of-type(3) header{
+    border-bottom: 2px solid rgb(237, 216, 100);
+}
+
+.services-component .card header h2{
+    font-weight: 700;
+    font-size: 2em;
+    margin: unset;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.services-component .card .benefit-line {
+    display: grid;
+    grid-template-columns: 6em auto;
+    align-items: center;
+}
+
+.services-component .card .benefit-line #sub-price {
+    font-size: 1.5em;
+}
+
+.services-component .card .benefit-x{
+    color: #FFFFFF;
+}
+.services-component .card .benefit-x::before {
+    content: '';
+    background-image: url(../../assets/cross-circle-svgrepo-com.svg);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position-y: 0.5em;
+    filter: invert(100%) sepia(7%) saturate(7388%) hue-rotate(292deg) brightness(107%) contrast(108%);
+    justify-self: left;
+    height: 5em;
+    width: 7em;
+
+}
+.services-component .card .benefit-check{
+    color: white;
+}
+.services-component .card .benefit-check::before {
+    content: '';
+    background-image: url(../../assets/check-svgrepo-com.svg);
+    background-position: 10%;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    filter: invert(70%) sepia(65%) saturate(3227%) hue-rotate(81deg) brightness(111%) contrast(120%);
+    justify-self: left;
+    height: 5em;
+    width: 7em;
+    
+}
+
+/* Card Button Styling */
+.services-component .card .sub-purchase {
+    /* Delete default styling */
+    text-decoration: none;
+    background: none;
+
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.2em;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 1em;
+    color: white;
+    cursor: pointer;
+
+    box-shadow: rgba(0, 0, 0, .24) 0px 8px 8px;
+}
+
+/* Card Backgrounds */
+.services-component .card:nth-of-type(1) .sub-purchase{
+    background: -webkit-linear-gradient(135deg, transparent 5%, rgb(112, 112, 112) 50%, transparent 100%);
+}
+.services-component .card:nth-of-type(2) .sub-purchase{
+    background: -webkit-linear-gradient(135deg, transparent 5%, var(--color-blue-4) 50%,transparent 100%);
+}
+.services-component .card:nth-of-type(3) .sub-purchase{
+    background: -webkit-linear-gradient(135deg, rgb(82, 76, 40) 5%, rgb(158, 148, 90) 50%, rgb(82, 76, 40) 100%);
+}
+
+/* Button Hover Effects */
+.services-component .card:nth-of-type(1) .sub-purchase:hover{
+    background: -webkit-linear-gradient(135deg, transparent 5%, rgb(112, 112, 112) 90%, transparent 100%);
+    font-size: 1.2em;
+}
+
+
+.services-component .card-1 {
+    background: -webkit-linear-gradient(135deg, transparent 5%, rgb(112, 112, 112) 50%, transparent 100%);
+}
+.services-component .card-1::after {
+    content: "";
+    display: block;
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    z-index: -1;
+    position: absolute;
+    border-radius: 25px;
+}
+.services-component .card-2 {
+    background: -webkit-linear-gradient(135deg, transparent 5%, var(--color-blue-4) 50%,transparent 100%);
+}
+.services-component .card-2::after {
+    content: '';
+    display: block;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    z-index: -1; 
+    position: absolute;
+    border-radius: 25px;
+}
+.services-component .card-3 {
+    background: -webkit-linear-gradient(135deg, rgb(82, 76, 40) 5%, rgb(158, 148, 90) 50%, rgb(82, 76, 40) 100%);
+}
+.services-component .card-3::after {
+    content: '';
+    display: block;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    z-index: -1; 
+    position: absolute;
+    border-radius: 25px;
+}
+
+
+
+/* Carousel */
+.services-component .carousel {
+    position: relative;
+    display: grid;
+    grid-template-columns: 4% 1fr 4%;
+    padding: 1.5em 0em;
+    border-radius: 25px;
+    background-color: #1b2028;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, .8) 0px 8px 8px;
+    outline: 2px solid var(--color-blue-2);
+}
+
+.services-component .carousel .carousel-track{
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: hidden;
+    padding: 20px;
+
+    border-radius: 25px;
+    outline: 2px solid var(--color-blue-2);
+    scroll-behavior: smooth;
+}
+
+.services-component .carousel .control{
+    border: none;
+    width: fit-content;
+    align-self: center;
+    padding: 0.25vw;
+    height: fit-content;
+
+
+    font-size: 1.5vw;
+    font-weight: 700;
+    cursor: pointer;
+
+    color: rgba(255,255,255,0.6);
+    background-color: rgba(166,242,255,.1);
+    border-radius: 25%;
+    outline: 1px solid var(--color-blue-3);
+    box-shadow: rgba(0, 0, 0, .8) 0px 8px 8px;
+
+    transition: all 500ms ease;
+}
+.services-component .carousel .left {
+    justify-self: center;
+}
+.services-component .carousel .left:hover{
+    background-color: rgba(166,242,255,0.2);
+    color: rgba(255,255,255,1);
+    transition: all 500ms ease;
+}
+.services-component .carousel .right{
+    justify-self: center;
+}
+.services-component .carousel .right:hover{
+    background-color: rgba(166,242,255,0.2);
+    color: rgba(255,255,255,1);
+    transition: all 500ms ease;
+}
+
+.carousel img{
+    height: 340px;
+    object-fit: cover;
+    width: calc(100%/3);
+}
+
+@keyframes blueFadeIn {
+    0% {
+        box-shadow: rgba(0, 0, 0, .8) 0px 8px 8px;
+    }
+    100% {
+        box-shadow: inset 0 0 0 1000px rgba(166,242,255,.3);
+    }
+}
+
+.services-component .carousel .card{
+    flex: 0 0 auto;
+    height: 30em;
+     width: calc(96%/5);
+    outline: 1px solid black;;
+    border-radius: 25px;
+
+    position: relative;
+    box-shadow: rgba(0, 0, 0, .8) 0px 8px 8px;
+
+    transition: all 500ms ease;
+}
+
+.services-component .carousel .card .overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: rgba(166,242,255,0);
+
+    transition: all 500ms ease;
+}
+
+.services-component .carousel .card > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.services-component .carousel .card:hover{
+    box-shadow: rgba(166, 242, 255, .8) 0px 8px 20px;
+
+    transition: all 500ms ease;
+}
+
+.services-component .carousel .card:hover .overlay{
+    background-color: rgba(166,242,255,.3);
+}
+
+.services-component .carousel .card .contents{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    opacity: 0%;
+    border-radius: 0 0 25px 25px;
+    text-align: center;
+    opacity: 0%;
+
+    transition: all 500ms ease;
+}
+
+.services-component .carousel .card:hover .contents{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: black;
+    border-radius: 0 0 25px 25px;
+    text-align: center;
+    background-color: var(--color-blue-3);
+    outline: 1px solid var(--color-blue-3);
+    opacity: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 500ms ease;
+}
+
+.services-component .carousel .card .contents h1{
+    margin-bottom: 0.5em;
+}
+
+.services-component .carousel .card .socials{
+    width: 100%;
+    max-width: 15em;
+    
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.services-component .carousel .card .socials a{
+    border-radius: 1em;
+    padding: 0.25em;
+}
+
+.services-component .carousel .card .socials a:hover{
+    outline: 3px solid black;
+    background-color: var(--color-blue-2);
+}
+
+.services-component .carousel .card .socials img{
+    width: 2em;
+    height: 2em;
+    opacity: 0;
+}
+
+.services-component .carousel .card:hover .socials img{
+    opacity: 1;
+}
+
+/* Gym Amenities */
+.services-component .amenities-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.services-component .amenities-container > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+    margin-bottom: 2em;
+    width: calc(100%/3);
+
+    padding: 0.75em;
+    border-radius: 25px;
+}
+
+.services-component .amenities-container > div #imageModal{
+    height: 25vw;
+    width: 100%;
+    border-radius: 25px;
+    background-color: black;
+    cursor: pointer;
+    outline: 1px solid black;
+    box-shadow: rgba(0, 0,  0, .8) 0px 8px 8px;
+    position: relative;
+    padding: unset;
+    border: unset;
+
+    transition: all 300ms ease;
+}
+
+.services-component .amenities-container > div #imageModal img{
+    position: absolute;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.services-component .amenities-container > div #imageModal:hover{
+    background-color: rgba(166,242,255,.3);
+    outline: 3px solid var(--color-blue-2);
+
+    transition: all 300ms ease;
+}
+
+.services-component .amenities-container .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.services-component .amenities-container .text figcaption {
+    font-weight: 700;
+    margin-top: 1em;
+    font-size: 2vw;
+}
+
+.services-component .amenities-container .text h1 {
+    font-size: 2vw;
+}
+
+.services-component .amenities-container .text ul {
+    font-size: 1.5vw;
+    font-weight: 700;
+    text-align: left;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.services-component .amenities-container .text ul li {
+    margin-bottom: 0.5em;
+}
+
+.services-component .amenities-container .text p {
+    padding: 1em 0;
+    font-size: 1.25vw;
+    margin: unset;
+}
+
+/* Modal */
+.services-component .amenities-container .modal {
+    width: 90vw;
+    height: 90vh;
+    border-radius: 25px;
+    
+    background: rgb(0,112,133);
+    background: linear-gradient(135deg, rgba(0,112,133,1) 0%, rgba(26,26,26,1) 48%, rgba(0,112,133,1) 98%);
+}
+
+.services-component .amenities-container .modal::backdrop {
+    background: rgb(0 0 0 / .8);
+}
+.services-component .amenities-container .modal #modalContents {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    grid-template-rows: 1fr;
+    padding: 0em;
+    position: relative;
+}
+
+.services-component .amenities-container .modal .images {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.services-component .amenities-container .modal .images img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border: 3px solid black;
+    object-fit: cover;
+
+    display: none;
+    box-shadow: rgba(0, 0, 0, .5) 0px 8px 8px;
+}
+
+.services-component .amenities-container .modal .text button{
+    width: 3vw;
+    height: 3vw;
+    font-size: 1.5vw;
+    border-radius: 50%;
+    padding: unset;
+    border: 2px solid black;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: white;
+
+    transition: all 300ms ease;
+}
+
+.services-component .amenities-container .modal .text button:hover{
+    background-color: var(--color-blue-3);
+    transition: all 300ms ease;
+}
+
+.services-component .amenities-container .modal .text ul{
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+@media screen and (max-width: 1240px) {
+    .services-component {
+        padding: 0em 8vw;
+    }
+
+    .services-component #subHeading {
+        font-size: 8vw;
+    }
+
+    .services-component .card-container{
+        flex-direction: column;
+    }
+
+    .services-component .card-container .card{
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    .services-component .card .benefit-line #sub-price {
+        font-size: 3vw;
+    }
+
+    .services-component .card .benefit-line {
+        grid-template-columns: 6em auto;
+    }
+
+    .services-component .card .benefit-check::before {
+        width: 5em;
+    }
+    .services-component .card .benefit-x::before {
+        width: 5em;
+        background-position-y: 1em;
+    }
+    .services-component .card header h1 {
+        font-size: 6vw;
+    }
+    .services-component .card header h2 {
+        font-size: 6vw;
+    }
+
+    .services-component .carousel {
+        padding: 1.5em 0em;
+    }
+
+    .services-component .carousel .card{
+        width: calc(96%/3);
+        height: 20em;
+    }
+
+    .services-component .amenities-container .modal {
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .services-component .carousel .left {
+        padding: 0.1vw;
+    }
+    .services-component .carousel .card{
+        height: 50em;
+        width: calc(100%/1);
+    }
+}
