@@ -39,7 +39,7 @@ const Footer = () => {
                     <ul>
                         <li>4946 Not Real Street, CA 92651</li>
                         <li>Phone: 1-555-776-2323</li>
-                        <li>Email: myEmailHere@gmail.com</li>
+                        <li>Email: andrew044green@gmail.com</li>
                     </ul>
                 </div>
             </div>
