@@ -65,9 +65,11 @@ const AdminComponent = () => {
 
     let fetchRecentlySoldRows =() => {
         /* Render the recently sold completed items */
+        let sortedArray = recentlySoldRows?.sort((a,b) => new Date(a.time) - new Date(b.time));
+        let sortedArrayDescending = sortedArray?.reverse();
         return (
             <tbody>
-                {recentlySoldRows?.map((order, index) => (
+                {sortedArrayDescending?.map((order, index) => (
                     <tr key={index}>
                         <td>{order?.time}</td>
                         <td>{order?.session_id}</td>
