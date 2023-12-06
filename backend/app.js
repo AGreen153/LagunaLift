@@ -7,8 +7,6 @@ const { validationResult, body } = require('express-validator');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const path = require('path')
-require('dotenv').config({ path:
-    path.join(__dirname, '.env') });
 
 const app = express()
 app.use(express.json())
@@ -665,7 +663,6 @@ app.listen(8080, () => {
 /* Connect locally via http://localhost:8080/ since it's on port 8080 */
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "../dist");
-path.join(_dirname, '.env')
 
 app.use(express.static(buildPath))
 
