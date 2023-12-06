@@ -111,7 +111,8 @@ const CartMain = () => {
     let [productsCopy, setProductsCopy] = useState([])
     const dispatch = useDispatch();
     let [quantityValue, setQuantityValue] = useState([]);
-    let [errorMessage, setErrorMessage] = useState("Your cart is empty");
+    let [errorMessage, setErrorMessage] = useState("");
+    // let [errorMessage, setErrorMessage] = useState("Your cart is empty");
     let [maxQuantity, setMaxQuantity] = useState([]);
     let [cartIsEmpty, setCartIsEmpty] = useState(true);
     let loadedOnce = false;
@@ -450,10 +451,21 @@ const CartMain = () => {
         setProductsCopy([...products]);
     }, [products])
 
+    /* Update the error message based on login and cart status */
+    useEffect(() => {
+        if (isSignedIn == null || isSignedIn == false) {
+            setErrorMessage("Please sign in")
+        } else if (cartIsEmpty == true) {
+            setErrorMessage("Your cart is empty")
+        } else if (isSignedIn == true) {
+            setErrorMessage("")
+        }
+    }, [cartIsEmpty, isSignedIn])
+
     return ( 
         <section className="cartmain-component">
-            {cartIsEmpty && <h1 id='loading'>{errorMessage}</h1>}
-            {!cartIsEmpty && <>
+            {(cartIsEmpty || isSignedIn) && <h1 id='loading'>{errorMessage}</h1>}
+            {!cartIsEmpty && isSignedIn && <>
                 <div id="cart">
                     <h1>Shopping Cart</h1>
                     <div id="links">
@@ -462,13 +474,13 @@ const CartMain = () => {
                     {displayCart()}
                 </div> 
             </>}
-            {!cartIsEmpty && <>
+            {!cartIsEmpty && isSignedIn && <>
                 <div id="checkout">
                     <h1 id="total">Subtotal ({quantityCount(productsCopy)} items):<br /><strong>${total(productsCopy)}</strong></h1>
                     <button id='checkoutButton' onClick={() => {stripePayment(products, email);}}>Proceed to checkout</button>
                 </div>
             </>}
-            {!cartIsEmpty && <p id="disclaimer">Disclaimer: All purchases are processed via Stripe's test mode and will not charge you.<br></br>For a successful purchase, use card number 4242 4242 4242 4242<br></br>For an unsuccessful purchase, use the back button on the top left of Stripe</p>}
+            {!cartIsEmpty && isSignedIn && <p id="disclaimer">Disclaimer: All purchases are processed via Stripe's test mode and will not charge you.<br></br>For a successful purchase, use card number 4242 4242 4242 4242<br></br>For an unsuccessful purchase, use the back button on the top left of Stripe</p>}
         </section>
      );
 }
