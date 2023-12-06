@@ -656,6 +656,7 @@ app.use((err, req, res, next) => {
 
 app.listen(8080, () => {
     console.log('CORS-enabled web server listening on port 8080')
+    console.log('process.env.CLIENT_URL=', process.env.CLIENT_URL)
 })
 
 
