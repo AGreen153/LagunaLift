@@ -6,6 +6,7 @@ const cors = require('cors');
 const { validationResult, body } = require('express-validator');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
+const path = require('path')
 
 const app = express()
 app.use(express.json())
@@ -655,4 +656,25 @@ app.use((err, req, res, next) => {
 
 app.listen(8080, () => {
     console.log('CORS-enabled web server listening on port 8080')
+})
+
+
+/* Fetch Static assets from the build and serve it using a router using the server (This goes at bottom so it doesn't override the other requests) */
+/* Connect locally via http://localhost:8080/ since it's on port 8080 */
+const _dirname = path.dirname("")
+const buildPath = path.join(_dirname  , "../dist");
+
+app.use(express.static(buildPath))
+
+app.get("/*", function(req, res){
+    console.log("attempting to send file")
+    res.sendFile(
+        path.join(__dirname, "../dist/index.html"),
+        function (err) {
+          if (err) {
+            res.status(500).send(err);
+          }
+        }
+      );
+
 })
