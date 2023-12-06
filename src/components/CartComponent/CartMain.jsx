@@ -464,7 +464,7 @@ const CartMain = () => {
 
     return ( 
         <section className="cartmain-component">
-            {(cartIsEmpty || isSignedIn) && <h1 id='loading'>{errorMessage}</h1>}
+            {(cartIsEmpty || (isSignedIn == null) || (isSignedIn == false)) && <h1 id='loading'>{errorMessage}</h1>}
             {!cartIsEmpty && isSignedIn && <>
                 <div id="cart">
                     <h1>Shopping Cart</h1>
