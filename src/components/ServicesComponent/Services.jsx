@@ -116,6 +116,11 @@ const Services = () => {
     useEffect(() => {        
         /* Resize event on window size change*/
         function handleResize() {
+            /* If the component changes then don't continue because getBoundingClientRect */
+            if (window.location.pathname != "/Services") {
+                return;
+            }
+
             const carouselContainer = [...document.querySelectorAll(".carousel-track")];
             const card = document.querySelector('.carousel-card');
             const cardWidth = card.getBoundingClientRect().width;
@@ -155,6 +160,11 @@ const Services = () => {
             return;
         }
 
+        /* If the component changes then don't continue because getBoundingClientRect */
+        if (window.location.pathname != "/Services") {
+            return;
+        }
+
         /* Set the buttonClickedRef so the useState autoslide doesn't fire twice */
         setButtonClicked(true);
         setPendingAutoSlide(false);
@@ -187,6 +197,11 @@ const Services = () => {
     const carouselNextClick = event => {
         /* If the animation can't be clicked then do nothing */
         if (!canAdvance) {
+            return;
+        }
+
+        /* If the component changes then don't continue because getBoundingClientRect */
+        if (window.location.pathname != "/Services") {
             return;
         }
 
@@ -234,6 +249,11 @@ const Services = () => {
         if (!canAdvance) {
             return false;
         }        
+
+        /* If the component changes then don't continue because getBoundingClientRect */
+        if (window.location.pathname != "/Services") {
+            return;
+        }
 
         if (pendingAutoSlideRef.current == false) {
             return
@@ -299,6 +319,11 @@ const Services = () => {
         if ((trainers.length == 0) || (indexCounterRef.current < (trainers?.length-1))) {
             return;
         }    
+
+        /* If the component changes then don't continue because getBoundingClientRect */
+        if (window.location.pathname != "/Services") {
+            return;
+        }
 
         /* Move the bar forward 1 card with the animation */
         const carouselContainer = [...document.querySelectorAll(".carousel-track")];

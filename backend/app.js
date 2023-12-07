@@ -668,7 +668,6 @@ const buildPath = path.join(_dirname  , "../dist");
 app.use(express.static(buildPath))
 
 app.get("/*", function(req, res){
-    console.log("attempting to send file")
     res.sendFile(
         path.join(__dirname, "../dist/index.html"),
         function (err) {
