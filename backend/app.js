@@ -662,6 +662,7 @@ app.listen(8080, () => {
 
 /* Fetch Static assets from the build and serve it using a router using the server (This goes at bottom so it doesn't override the other requests) */
 /* Connect locally via http://localhost:8080/ since it's on port 8080 */
+/*
 const _dirname = path.dirname("")
 const buildPath = path.join(_dirname  , "../dist");
 
@@ -678,3 +679,4 @@ app.get("/*", function(req, res){
       );
 
 })
+*/
