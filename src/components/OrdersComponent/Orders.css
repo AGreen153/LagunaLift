@@ -29,6 +29,7 @@
     
     text-align: center;
     padding: 0.25em;
+    overflow-wrap: anywhere;
 }
 
 .orders-component .order{
@@ -69,11 +70,11 @@
     border: 1px solid black;
 }
 
-.orders-component .item{
+.orders-component .item {
     display: grid;
     grid-template-columns: 25fr 75fr;
     flex-direction: row;
-    padding: 2em 0;
+    padding: 3em 0;
 }
 
 .orders-component .item .details {
@@ -106,10 +107,10 @@
     }
 
     .orders-component #title, .orders-component .item .details h1 {
-        font-size: 2vw;
+        font-size: 4vw;
     }
 
     .orders-component #orderNumber, .orders-component .order #stats, .orders-component .item .details {
-        font-size: 1.75vw;
+        font-size: 2.5vw;
     }
 }
