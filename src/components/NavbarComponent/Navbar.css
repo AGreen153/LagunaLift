@@ -17,7 +17,7 @@
     text-decoration: none;
 }
 
-.navbar-component #logo{
+.navbar-component #logo {
     font-size: 1.6em;
     display: flex;
     align-items: center;
@@ -150,11 +150,11 @@
     .navbar-component {
         flex-direction: row;
         padding: 1em 8vw;
-        font-size: 2vw;
+        font-size: 3.5vw;
     }
 
-    .navbar-component #logo{
-        font-size: 2vw;
+    .navbar-component #logo {
+        font-size: 3.5vw;
     }
 
     .navbar-component .links {

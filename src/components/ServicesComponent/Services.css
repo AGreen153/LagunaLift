@@ -527,6 +527,7 @@
 @media screen and (max-width: 1240px) {
     .services-component {
         padding: 0em 8vw;
+        font-size: 2vw;
     }
 
     .services-component #subHeading {
@@ -575,6 +576,14 @@
 
     .services-component .amenities-container .modal {
         height: fit-content;
+    }
+
+    .services-component .amenities-container .text figcaption {
+        font-size: 3vw;
+    }
+
+    .services-component .amenities-container .text p {
+        font-size: 3vw;
     }
 }
 

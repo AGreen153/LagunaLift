@@ -72,17 +72,17 @@
 }
 
 .product-component #product-info #title {
-    font-size: 1.75vw;
+    font-size: 3.5vw;
     margin: unset;
 }
 
 .product-component #product-info #price{
-    font-size: 1.75vw;
+    font-size: 3.5vw;
     margin: unset;
 }
 
 .product-component #product-info #description {
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 .product-component #product-info #quantity-and-error {
@@ -102,7 +102,7 @@
 }
 
 .product-component #product-info #product-type{
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 .product-component #product-info #disclaimer {
@@ -165,6 +165,7 @@
     .product-component {
         padding: 1em 8vw;
         flex-direction: column;
+        font-size: 3vw;
     }
 
     .product-component #images {
@@ -201,32 +202,32 @@
     }
 
     .product-component #product-info #add-to-cart {
-        font-size: 3vw;
+        font-size: 5vw;
         width: 35vw;
     }
 
     .product-component #product-info #title{
-        font-size: 3vw;
+        font-size: 5vw;
     }
     
     .product-component #product-info #price{
-        font-size: 3vw;
+        font-size: 5vw;
     }
     
     .product-component #product-info #description{
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .product-component #product-info #quantity-and-error span {
-        font-size: 2vw;
+        font-size: 3vw;
     }
     
     .product-component #product-info #product-type{
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .product-component #product-info #disclaimer{
-        font-size: 1.5vw;
+        font-size: 2vw;
     }
 
 }

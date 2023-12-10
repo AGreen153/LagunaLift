@@ -154,10 +154,10 @@
         font-size: 6vw;
     }
     .landing-page-component #splash div h2 {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 
     .landing-page-component #splash .buttons button {
-        font-size: 2vw;
+        font-size: 3vw;
     }
 }

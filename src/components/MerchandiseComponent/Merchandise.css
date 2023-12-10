@@ -216,7 +216,7 @@
         padding: unset;
     }
     .merchandise-component .row {
-        font-size: 2vw;
+        font-size: 1.5vw;
     }
     .merchandise-component .row .quantity {
         font-size: 2vw;
@@ -277,6 +277,15 @@
     .merchandise-component .main {
         grid-template-columns: 1fr;
     }
+
+    .merchandise-component .row {
+        font-size: 3.5vw;
+    }
+
+    .merchandise-component #grid {
+        grid-template-columns: 40fr 60fr;
+    }
+
     .merchandise-component #grid1x1 div{
         background-size: 100%;
     }
