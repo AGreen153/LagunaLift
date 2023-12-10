@@ -765,9 +765,9 @@ async function resetSubscription(email) {
     }
 }
 
-app.listen(8800, () => { /* 8800 is the port that it will be listening from */
-    console.log("Connected to backend!")
-})
+// app.listen(8800, () => { /* 8800 is the port that it will be listening from */
+//     console.log("Connected to backend!")
+// })
 
 module.exports = {
     getEmployees, 
