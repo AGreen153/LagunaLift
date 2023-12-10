@@ -10,7 +10,7 @@
     place-self: center;
     margin-left: auto;
     margin-right: auto;
-    font-size: 3vw; /* So everything default scales with 4k resolution */
+    font-size: 1.5vw; /* So everything default scales with 4k resolution */
 }
 
 /* Reuseable Styling */
@@ -129,6 +129,7 @@
 @media screen and (max-width: 1240px) {
     .login-component {
         width: 85%;
+        font-size: 3vw;
     }
     .login-component #cardSignIn {
         width: 100%;
@@ -136,5 +137,11 @@
 
     .login-component .text-blue-line span{
         font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .login-component {
+        font-size: 5vw;
     }
 }

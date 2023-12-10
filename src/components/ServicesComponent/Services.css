@@ -320,7 +320,7 @@
     transition: all 500ms ease;
 }
 
-.services-component .carousel .card:hover .contents{
+.services-component .carousel .card:hover .contents {
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -572,6 +572,10 @@
     .services-component .carousel .card{
         width: calc(96%/3);
         height: 20em;
+    }
+
+    .services-component .carousel .card:hover .contents {
+        font-size: 1.5vw;
     }
 
     .services-component .amenities-container .modal {
