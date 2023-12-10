@@ -73,7 +73,7 @@
     display: grid;
     grid-template-columns: 25fr 75fr;
     flex-direction: row;
-    padding: 1em 0;
+    padding: 2em 0;
 }
 
 .orders-component .item .details {
@@ -89,11 +89,16 @@
 
 .orders-component .item:not(:last-of-type) {
     border-bottom: 2px solid var(--color-blue-2);
+    /* padding-bottom: 4em; */
 }
 
 @media screen and (max-width: 1240px) {
     .orders-component {
         padding: 1em 8vw;
+    }
+
+    .orders-component .item img {
+        min-height: 20em;
     }
 
     .orders-component .order{
@@ -105,6 +110,6 @@
     }
 
     .orders-component #orderNumber, .orders-component .order #stats, .orders-component .item .details {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
     }
 }

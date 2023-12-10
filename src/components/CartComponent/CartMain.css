@@ -138,10 +138,23 @@
 }
 
 @media screen and (max-width: 800px) {
+    .cartmain-component {
+        font-size: 1.75vw;
+    }
+
     .cartmain-component .item {
         display: flex;
         flex-direction: row;
         gap: 1em;
+        font-size: 2vw;
+    }
+
+    .cartmain-component #cart {
+        font-size: 2vw;
+    }
+
+    .cartmain-component #checkout {
+        font-size: 2vw;
     }
 
     .cartmain-component .item .details {
