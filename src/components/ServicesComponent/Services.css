@@ -592,8 +592,19 @@
 }
 
 @media screen and (max-width: 600px) {
+    .services-component .carousel {
+        padding: 1.5em 0em;
+        gap: 2.5vw
+    }
     .services-component .carousel .left {
         padding: 0.1vw;
+        font-size: 5vw;
+        margin-left: 2vw;
+    }
+    .services-component .carousel .right {
+        padding: 0.1vw;
+        font-size: 5vw;
+        margin-right: 2vw;
     }
     .services-component .carousel .card{
         height: 50em;
