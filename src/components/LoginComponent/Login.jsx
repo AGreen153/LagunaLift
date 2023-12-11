@@ -186,6 +186,13 @@ const Login = () => {
                 return;
             }
 
+            /* Unset old variables to make sure everything is clean */
+            deleteCookie("email"); 
+            deleteCookie("sessionID"); 
+            setIsSignedIn(false);
+            setUserSubscriptionType(null)
+            setUserType(null)
+
             /* Login is Successful Display that to the user */
             document.getElementById("error").style.color = "springgreen"
             setErrorMessage(`Login Successful! You will be redirected in ${redirectTimeout/1000} seconds...`);
