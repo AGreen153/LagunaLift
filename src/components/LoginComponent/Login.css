@@ -129,7 +129,7 @@
 @media screen and (max-width: 1240px) {
     .login-component {
         width: 85%;
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
     .login-component #cardSignIn {
         width: 100%;

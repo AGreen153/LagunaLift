@@ -72,12 +72,12 @@
 }
 
 .product-component #product-info #title {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     margin: unset;
 }
 
-.product-component #product-info #price{
-    font-size: 3.5vw;
+.product-component #product-info #price {
+    font-size: 2vw;
     margin: unset;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .product-component #product-info #product-type{
-    font-size: 1.5vw;
+    font-size: 1vw;
 }
 
 .product-component #product-info #disclaimer {
