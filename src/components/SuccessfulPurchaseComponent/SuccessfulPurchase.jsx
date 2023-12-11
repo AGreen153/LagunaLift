@@ -67,6 +67,8 @@ const SucessfulPurchase = () => {
                 navigate("/Orders")
             }, 1000);
         }).catch(e => {
+            setMessage(e)
+            console.log(e)
             console.error(e.error)
         })
         
