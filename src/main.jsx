@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import { persistor, store } from "./redux/store"
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react'
@@ -30,7 +31,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Wrapper>
     <Provider store={store}>
       <PersistGate loading={"loading"} persistor={persistor}>
-          <Router>
+        <BrowserRouter basename="/LagunaLift">
             <Navbar >
             </Navbar>
             <CartMini />
@@ -48,7 +49,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
               <Route path="*" element={<NotFound />}></Route>
             </Routes>
             <Footer />
-          </Router>
+          </BrowserRouter>
       </PersistGate>
     </Provider>
     </Wrapper>

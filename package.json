@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "runArgs": ["--env-file", "/.env"],
+  "homepage": "/LagunaLift/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
