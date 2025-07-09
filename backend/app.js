@@ -73,7 +73,7 @@ app.get("/LagunaLift/getTrainers", async (req, res) => {
     }
 })
 
-app.get("/LagunaLift/LagunaLift/getProducts", async (req, res) => {
+app.get("/getProducts", async (req, res) => {
     /* Print Request to Console for Backend Logging */
     devLogRequestsToConsole(req.route.path, new Date());
 

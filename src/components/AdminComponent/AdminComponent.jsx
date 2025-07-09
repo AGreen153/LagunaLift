@@ -334,7 +334,7 @@ const AdminComponent = () => {
             }
 
             /* Change was successful so update the products so the component is up to date */
-            fetch(`${import.meta.env.VITE_BACKEND_URL}/LagunaLift/LagunaLift/getProducts`).then(
+            fetch(`${import.meta.env.VITE_BACKEND_URL}/getProducts`).then(
                 response => response.json()
             ).then(data => {
                 setProducts(data);
@@ -417,7 +417,7 @@ const AdminComponent = () => {
         if (checkedSidebar?.id == "allItems") {
             /* Fetch the items if we don't have it (If we dont have this then there will be infinite fetch requests) */
             if (products == null) {
-                fetch(`${import.meta.env.VITE_BACKEND_URL}/LagunaLift/LagunaLift/getProducts`).then(
+                fetch(`${import.meta.env.VITE_BACKEND_URL}/getProducts`).then(
                     response => response.json()
                 ).then(data => {
                     setProducts(data);

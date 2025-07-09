@@ -33,7 +33,7 @@ const Merchandise = () => {
 
     /* Gather Product Information from Database on Page Load*/
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_BACKEND_URL}/LagunaLift/LagunaLift/getProducts`).then(
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/getProducts`).then(
             response => response.json()
         ).then(data => {
             data = addHoverImageProp(data);
