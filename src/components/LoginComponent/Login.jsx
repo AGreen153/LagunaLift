@@ -163,7 +163,7 @@ const Login = () => {
         const customHeaders = {
             "Content-Type": "application/json",
         }
-        const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/loginUser";
+        const url = import.meta.env.VITE_BACKEND_URL + "/loginUser";
 
         fetch(url, {
             method: "POST",
@@ -218,7 +218,7 @@ const Login = () => {
         })
         .then(() => {
             /* Get the new session ID from the server and store it in a cookie for later use */
-            const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/createCookie";
+            const url = import.meta.env.VITE_BACKEND_URL + "/createCookie";
             userInfoObj = {
                 "email": email
             }
@@ -241,7 +241,7 @@ const Login = () => {
         })
         .then(() => {
             /* Get the cart and update the redux to that cart */
-            const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/getCart";
+            const url = import.meta.env.VITE_BACKEND_URL + "/getCart";
             userInfoObj = {
                 "email": email
             }
@@ -333,7 +333,7 @@ const Login = () => {
         const customHeaders = {
             "Content-Type": "application/json",
         }
-        const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/createUser";
+        const url = import.meta.env.VITE_BACKEND_URL + "/createUser";
 
 
         fetch(url, {

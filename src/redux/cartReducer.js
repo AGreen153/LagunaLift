@@ -38,7 +38,7 @@ async function updateMySQL(state, email, oldState) {
     "cart": state.products,
     "cookie": getCookie("sessionID"),
   }
-  const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/updateCart"; /* This line may not work because the URL */
+  const url = import.meta.env.VITE_BACKEND_URL + "/updateCart"; /* This line may not work because the URL */
   return fetch(url, {
       method: "POST",
       headers: customHeaders,

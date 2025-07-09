@@ -84,7 +84,7 @@ export function stripePayment(productsInput, email) {
     }
 
     /* Send all the information to the backend server where it will be processed via Stripe */
-    const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/create-checkout-session";
+    const url = import.meta.env.VITE_BACKEND_URL + "/create-checkout-session";
     items.push(email);
     const customHeaders = {
         "Content-Type": "application/json",
@@ -313,7 +313,7 @@ const CartMain = () => {
             const bodyObj = {
                 "id": item.id
             }
-            const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/getProduct";
+            const url = import.meta.env.VITE_BACKEND_URL + "/getProduct";
             
             fetch(url, {
                 method: "POST",

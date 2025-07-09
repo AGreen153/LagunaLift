@@ -40,7 +40,7 @@ const Product = ({}) => {
         const customHeaders = {
             "Content-Type": "application/json",
         }
-        const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/getProduct";
+        const url = import.meta.env.VITE_BACKEND_URL + "/getProduct";
         fetch(url, {
             method: "POST",
             headers: customHeaders,

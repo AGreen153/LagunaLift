@@ -36,7 +36,7 @@ const SucessfulPurchase = () => {
             - the orders array for that email will be updated
             - the products quantity will be updated 
         */
-        const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/evaluate-stripe-sessionID";
+        const url = import.meta.env.VITE_BACKEND_URL + "/evaluate-stripe-sessionID";
         let bodyObj = {email: email, session_id: session_id}
         const customHeaders = {
             "Content-Type": "application/json",

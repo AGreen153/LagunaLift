@@ -33,7 +33,7 @@ const OrdersComponent = () => {
         }
 
         /* Whenever isSigned in changes, fetch the orders from the backend server - send the email */
-        let url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/fetch-orders";
+        let url = import.meta.env.VITE_BACKEND_URL + "/fetch-orders";
         const customHeaders = {
             "Content-Type": "application/json",
         }
@@ -74,7 +74,7 @@ const OrdersComponent = () => {
             return;
         }
 
-        let url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/fetch-subscription";
+        let url = import.meta.env.VITE_BACKEND_URL + "/fetch-subscription";
         let bodyObj = {email: email}
         bodyObj.session_id = getCookie("sessionID");
         const customHeaders = {
@@ -161,7 +161,7 @@ const OrdersComponent = () => {
     }
 
     const resetSubscription = () => {
-        let url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/reset-subscription";
+        let url = import.meta.env.VITE_BACKEND_URL + "/reset-subscription";
         const customHeaders = {
             "Content-Type": "application/json",
         }

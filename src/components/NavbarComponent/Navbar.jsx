@@ -40,7 +40,7 @@ const Navbar = () => {
                 "sessionID": getCookie("sessionID"),
                 "email": getCookie("email")
             }
-            const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/isEmailSessionIDValid";
+            const url = import.meta.env.VITE_BACKEND_URL + "/isEmailSessionIDValid";
             fetch(url, {
                 method: "POST",
                 headers: customHeaders,

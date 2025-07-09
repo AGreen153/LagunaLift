@@ -46,7 +46,7 @@ const AdminComponent = () => {
                 "email": email,
                 "session_id": getCookie("sessionID"),
             }
-            const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/admin-fetch-orders";
+            const url = import.meta.env.VITE_BACKEND_URL + "/admin-fetch-orders";
             fetch(url, {
                 method: "POST",
                 headers: customHeaders,
@@ -314,7 +314,7 @@ const AdminComponent = () => {
             "product": newObj,
             "session_id": getCookie("sessionID"),
         }
-        const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/admin-product";
+        const url = import.meta.env.VITE_BACKEND_URL + "/admin-product";
         fetch(url, {
             method: "POST",
             headers: customHeaders,

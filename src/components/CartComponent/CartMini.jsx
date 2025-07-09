@@ -278,7 +278,7 @@ const CartMini = () => {
             const bodyObj = {
                 "id": item.id
             }
-            const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/getProduct";
+            const url = import.meta.env.VITE_BACKEND_URL + "/getProduct";
             fetch(url, {
                 method: "POST",
                 headers: customHeaders,
@@ -342,7 +342,7 @@ const CartMini = () => {
             const bodyObj = {
                 "id": item.id
             }
-            const url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/getProduct";
+            const url = import.meta.env.VITE_BACKEND_URL + "/getProduct";
             fetch(url, {
                 method: "POST",
                 headers: customHeaders,

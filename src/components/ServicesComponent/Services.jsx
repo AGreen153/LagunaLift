@@ -45,7 +45,7 @@ const Services = () => {
 
     /* Connect to the database on page load and fill the state with the information */
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_BACKEND_URL}/LagunaLift/getTrainers`).then(
+        fetch(`${import.meta.env.VITE_BACKEND_URL}/getTrainers`).then(
             response => response.json()
         ).then(data => {
             setTrainers(data);
@@ -58,7 +58,7 @@ const Services = () => {
             return;
         }
 
-        let url = import.meta.env.VITE_BACKEND_URL + "/LagunaLift/fetch-subscription";
+        let url = import.meta.env.VITE_BACKEND_URL + "/fetch-subscription";
         let bodyObj = {"email": email, "session_id": getCookie("sessionID")}
         const customHeaders = {
             "Content-Type": "application/json",
