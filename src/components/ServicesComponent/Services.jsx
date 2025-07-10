@@ -117,7 +117,7 @@ const Services = () => {
         /* Resize event on window size change*/
         function handleResize() {
             /* If the component changes then don't continue because getBoundingClientRect */
-            if (window.location.pathname != "/Services") {
+            if (window.location.pathname != "/LagunaLift/Services") {
                 return;
             }
 
@@ -161,7 +161,7 @@ const Services = () => {
         }
 
         /* If the component changes then don't continue because getBoundingClientRect */
-        if (window.location.pathname != "/Services") {
+        if (window.location.pathname != "/LagunaLift/Services") {
             return;
         }
 
@@ -201,7 +201,8 @@ const Services = () => {
         }
 
         /* If the component changes then don't continue because getBoundingClientRect */
-        if (window.location.pathname != "/Services") {
+        console.log("window.location.pathname", window.location.pathname);
+        if (window.location.pathname != "/LagunaLift/Services") {
             return;
         }
 
@@ -251,7 +252,7 @@ const Services = () => {
         }        
 
         /* If the component changes then don't continue because getBoundingClientRect */
-        if (window.location.pathname != "/Services") {
+        if (window.location.pathname != "/LagunaLift/Services") {
             return;
         }
 
@@ -321,7 +322,7 @@ const Services = () => {
         }    
 
         /* If the component changes then don't continue because getBoundingClientRect */
-        if (window.location.pathname != "/Services") {
+        if (window.location.pathname != "/LagunaLift/Services") {
             return;
         }
 
