@@ -2,6 +2,8 @@ import './SuccessfulPurchase.css'
 import { useSearchParams } from 'react-router-dom';
 import { useEffect, useContext, useState } from 'react';
 import { WrapperContext } from '../WrapperComponent/Wrapper';
+import { useDispatch } from 'react-redux';
+import { resetCart } from '../../redux/cartReducer';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -11,6 +13,7 @@ const SucessfulPurchase = () => {
     const {isSignedIn, email} = useContext(WrapperContext);
     let [loadedOnce, setLoadedOnce] = useState(false)
     let [message, setMessage] = useState("Processing your payment...")
+    const dispatch = useDispatch();
 
     const navigate = useNavigate();
 
@@ -57,15 +60,17 @@ const SucessfulPurchase = () => {
                 setMessage(`Failure - ${error}`)
             } else {
                 setMessage("Success!")
+                /* Reset the redux state */
+                dispatch(resetCart({"email": email}))
             }
-            
-            /* Redirect the user to the Orders component */
-            setTimeout(() => {
-                if (!window.location.pathname.includes("/SuccessfulPurchase")) {
-                    return;
-                }
-                navigate("/Orders")
-            }, 1000);
+
+            // /* Redirect the user to the Orders component */
+            // setTimeout(() => {
+            //     if (!window.location.pathname.includes("/SuccessfulPurchase")) {
+            //         return;
+            //     }
+            //     navigate("/Orders")
+            // }, 1000);
         }).catch(e => {
             setMessage(e)
             console.log(e)
@@ -73,6 +78,17 @@ const SucessfulPurchase = () => {
         })
         
     }, [isSignedIn, email])
+
+    useEffect(() => {
+        if (message === "Success!") {
+            const timeout = setTimeout(() => {
+            if (window.location.pathname.includes("/SuccessfulPurchase")) {
+                navigate("/Orders");
+            }
+            }, 1000);
+            return () => clearTimeout(timeout);
+        }
+    }, [message]);
 
     return ( 
         <section className="successful-purchase-component">
