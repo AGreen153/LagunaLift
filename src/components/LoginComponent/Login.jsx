@@ -208,7 +208,7 @@ const Login = () => {
             /* Redirect if successful */
             if (data.isSuccessful == true) {
                 setTimeout(() => {
-                    if (window.location.pathname != "/Login") {
+                    if (window.location.pathname != "/LagunaLift/Login") {
                         return;
                     }
                     document.getElementById("logo").click();

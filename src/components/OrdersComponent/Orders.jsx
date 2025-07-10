@@ -21,7 +21,7 @@ const OrdersComponent = () => {
         }
 
         if (!isSignedIn) {
-            setErrorMessage("You are not logged in, redirecting in 5 seconds")
+            setErrorMessage("You are not logged in")
         }
     }, [isSignedIn, isLoaded])
 
