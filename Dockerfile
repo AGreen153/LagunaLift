@@ -1,5 +1,5 @@
 # Build step
-FROM node:18 as builder
+FROM node:16.16.0 as builder
 WORKDIR /app
 COPY . .
 RUN npm install
