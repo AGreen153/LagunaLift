@@ -201,7 +201,6 @@ const Services = () => {
         }
 
         /* If the component changes then don't continue because getBoundingClientRect */
-        console.log("window.location.pathname", window.location.pathname);
         if (window.location.pathname != "/LagunaLift/Services") {
             return;
         }

@@ -281,7 +281,7 @@ const Login = () => {
             /* Redirect to the mainpage */
             if (data.isSuccessful == true) {
                 setTimeout(() => {
-                    if (window.location.pathname != "/Login") {
+                    if (window.location.pathname != "/LagunaLift/Login") {
                         return;
                     }
                     document.getElementById("logo").click();

@@ -27,7 +27,7 @@ const SucessfulPurchase = () => {
         if (!isSignedIn) {
             setMessage("Sign In Validation failed redirecting...")
             setTimeout(() => {
-                if (!window.location.pathname.includes("/SuccessfulPurchase")) {
+                if (!window.location.pathname.includes("/LagunaLift/SuccessfulPurchase")) {
                     return;
                 }
                 navigate("/")
@@ -82,7 +82,7 @@ const SucessfulPurchase = () => {
     useEffect(() => {
         if (message === "Success!") {
             const timeout = setTimeout(() => {
-            if (window.location.pathname.includes("/SuccessfulPurchase")) {
+            if (window.location.pathname.includes("/LagunaLift/SuccessfulPurchase")) {
                 navigate("/Orders");
             }
             }, 1000);
