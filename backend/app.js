@@ -500,7 +500,11 @@ app.post('/LagunaLift/create-checkout-session', async (req,res) => {
 
     /* Body is an array of objects with an id property and quantity property example: [{id: '3', quantity: 1}, {id: '4', quantity: 3}] */
     const email = req.body[req.body.length-1];
-    const origin = req.headers.origin || 'https://andrewdennisgreen.com/LagunaLift'; // default fallback
+    var origin = req.headers.origin || 'https://andrewdennisgreen.com/LagunaLift'; // default fallback
+    if (origin == "https://andrewdennisgreen.com") {
+        origin = "https://andrewdennisgreen.com/LagunaLift";
+    }
+    console.log("LagunaLift - Stripe Payment Origin:", origin);
     req.body.pop();
     
     /* If it's a subscription */
