@@ -35,11 +35,16 @@ const SucessfulPurchase = () => {
             return;
         }
 
+        console.log("11111111 Successfully loaded the SuccessfulPurchase component with session_id:", session_id);
+
         /* Send the email and session_id to the backend where it will be evaluated. 
             - the orders array for that email will be updated
             - the products quantity will be updated 
         */
+       console.log("11111111 Evaluating Stripe session ID:", session_id);
         const url = import.meta.env.VITE_BACKEND_URL + "/evaluate-stripe-sessionID";
+        console.log("11111111 Sending to URL:", url);
+        console.log("1111111 bodyObj:", {email: email, session_id: session_id});
         let bodyObj = {email: email, session_id: session_id}
         const customHeaders = {
             "Content-Type": "application/json",

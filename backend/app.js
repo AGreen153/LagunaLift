@@ -500,6 +500,7 @@ app.post('/LagunaLift/create-checkout-session', async (req,res) => {
 
     /* Body is an array of objects with an id property and quantity property example: [{id: '3', quantity: 1}, {id: '4', quantity: 3}] */
     const email = req.body[req.body.length-1];
+    const origin = req.headers.origin || 'https://andrewdennisgreen.com/LagunaLift'; // default fallback
     req.body.pop();
     
     /* If it's a subscription */
@@ -554,8 +555,10 @@ app.post('/LagunaLift/create-checkout-session', async (req,res) => {
                             quantity: item.quantity
                         }
                     }),
-                    success_url: `${process.env.CLIENT_URL}/SuccessfulPurchase?session_id={CHECKOUT_SESSION_ID}`,
-                    cancel_url: `${process.env.CLIENT_URL}/Cart`
+                    // success_url: `${process.env.CLIENT_URL}/SuccessfulPurchase?session_id={CHECKOUT_SESSION_ID}`,
+                    // cancel_url: `${process.env.CLIENT_URL}/Cart`
+                    success_url: `${origin}/SuccessfulPurchase?session_id={CHECKOUT_SESSION_ID}`,
+                    cancel_url: `${origin}/Cart`
                 })
                 // update the backend of the pending stripe request
                 let session_id = session.id
