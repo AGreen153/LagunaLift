@@ -208,7 +208,7 @@ const Login = () => {
             /* Redirect if successful */
             if (data.isSuccessful == true) {
                 setTimeout(() => {
-                    if (window.location.pathname != "/LagunaLift/Login") {
+                    if (window.location.pathname != "/LagunaLift/Login" || window.location.pathname != "/Login") {
                         return;
                     }
                     document.getElementById("logo").click();
@@ -281,7 +281,7 @@ const Login = () => {
             /* Redirect to the mainpage */
             if (data.isSuccessful == true) {
                 setTimeout(() => {
-                    if (window.location.pathname != "/LagunaLift/Login") {
+                    if (window.location.pathname != "/LagunaLift/Login" || window.location.pathname != "/Login") {
                         return;
                     }
                     document.getElementById("logo").click();
