@@ -25,13 +25,19 @@ import AdminPanel from '../src/components/AdminComponent/AdminComponent'
 import SuccessfulPurchase from '../src/components/SuccessfulPurchaseComponent/SuccessfulPurchase'
 import Wrapper from './components/WrapperComponent/Wrapper'
 
+/* Determine if the current path is a subpath of /LagunaLift */
+/* IF on andrewdennisgreen.com/LagunaLift it will result in /LagunaLift */
+/* IF on lagunalift.com it will result in / */
+const isSubPath = window.location.pathname.startsWith('/LagunaLift');
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Wrapper>
     <Provider store={store}>
       <PersistGate loading={"loading"} persistor={persistor}>
-        <BrowserRouter basename="/LagunaLift">
+        {/* <BrowserRouter basename="/LagunaLift"> */}
+        {/* <BrowserRouter basename="/"> */}
+        <BrowserRouter basename={isSubPath ? '/LagunaLift' : '/'}>
             <Navbar >
             </Navbar>
             <CartMini />
