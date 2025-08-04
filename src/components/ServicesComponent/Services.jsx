@@ -117,7 +117,7 @@ const Services = () => {
         /* Resize event on window size change*/
         function handleResize() {
             /* If the component changes then don't continue because getBoundingClientRect */
-            if (window.location.pathname != "/LagunaLift/Services" || window.location.pathname != "/Services") {
+            if (window.location.pathname != "/LagunaLift/Services" && window.location.pathname != "/Services") {
                 return;
             }
 
@@ -161,7 +161,7 @@ const Services = () => {
         }
 
         /* If the component changes then don't continue because getBoundingClientRect */
-        if (window.location.pathname != "/LagunaLift/Services" || window.location.pathname != "/Services") {
+        if (window.location.pathname != "/LagunaLift/Services" && window.location.pathname != "/Services") {
             return;
         }
 
@@ -201,7 +201,7 @@ const Services = () => {
         }
 
         /* If the component changes then don't continue because getBoundingClientRect */
-        if (window.location.pathname != "/LagunaLift/Services" || window.location.pathname != "/Services") {
+        if (window.location.pathname != "/LagunaLift/Services" && window.location.pathname != "/Services") {
             return;
         }
 
@@ -251,7 +251,7 @@ const Services = () => {
         }        
 
         /* If the component changes then don't continue because getBoundingClientRect */
-        if (window.location.pathname != "/LagunaLift/Services" || window.location.pathname != "/Services") {
+        if (window.location.pathname != "/LagunaLift/Services" && window.location.pathname != "/Services") {
             return;
         }
 
@@ -321,7 +321,7 @@ const Services = () => {
         }    
 
         /* If the component changes then don't continue because getBoundingClientRect */
-        if (window.location.pathname != "/LagunaLift/Services" || window.location.pathname != "/Services") {
+        if (window.location.pathname != "/LagunaLift/Services" && window.location.pathname != "/Services") {
             return;
         }
 

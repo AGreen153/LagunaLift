@@ -27,7 +27,7 @@ const SucessfulPurchase = () => {
         if (!isSignedIn) {
             setMessage("Sign In Validation failed redirecting...")
             setTimeout(() => {
-                if (!window.location.pathname.includes("/LagunaLift/SuccessfulPurchase") || !window.location.pathname.includes("/SuccessfulPurchase")) {
+                if (!window.location.pathname.includes("/LagunaLift/SuccessfulPurchase") && !window.location.pathname.includes("/SuccessfulPurchase")) {
                     return;
                 }
                 navigate("/")
@@ -66,7 +66,7 @@ const SucessfulPurchase = () => {
 
             // /* Redirect the user to the Orders component */
             // setTimeout(() => {
-            //     if (!window.location.pathname.includes("/SuccessfulPurchase") || !window.location.pathname.includes("/LagunaLift/SuccessfulPurchase")) {
+            //     if (!window.location.pathname.includes("/SuccessfulPurchase") && !window.location.pathname.includes("/LagunaLift/SuccessfulPurchase")) {
             //         return;
             //     }
             //     navigate("/Orders")
