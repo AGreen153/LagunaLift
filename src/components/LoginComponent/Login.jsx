@@ -405,7 +405,7 @@ const Login = () => {
                         </div>
                         <label htmlFor="input_email">Email</label>
                         <input type="email" id="input_email" onChange={() => {setErrorMessage("")}} required/>
-                        <label htmlFor="input_password">Password</label>
+                        <label htmlFor="input_password">Password (Salted and hashed)</label>
                         <input type="password" id="input_password" onChange={() => {validatePasswordStrength(); setErrorMessage("")}} required/>
                         <label htmlFor="input_password_validation">Re-enter password</label>
                         <input type="password" id="input_password_validation" onChange={() => {validatePasswordStrength(); setErrorMessage("")}} required/>
